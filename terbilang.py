@@ -46,12 +46,12 @@ def _terbilang(numb):
         satuan = num[numb%10]
         kalimat = puluhan + satuan
     elif numb < 200:
-        kalimat = "SERATUS " + _terbilang(numb%SERATUS)
+        kalimat = "Seratus " + _terbilang(numb%SERATUS)
     elif numb < SERIBU:
         ratusan = num[numb/SERATUS] + "Ratus "
         kalimat = ratusan + _terbilang(numb%SERATUS)
     elif numb < 2000:
-        kalimat = "SERIBU " + _terbilang(numb%SERIBU)
+        kalimat = "Seribu " + _terbilang(numb%SERIBU)
     elif numb < SEJUTA:
         ribuan = _terbilang(numb/SERIBU) + "Ribu "
         kalimat = ribuan + _terbilang(numb%SERIBU)
